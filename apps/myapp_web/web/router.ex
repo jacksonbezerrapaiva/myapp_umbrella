@@ -14,9 +14,9 @@ defmodule MyappWeb.Router do
   end
 
   scope "/", MyappWeb do
-    pipe_through :browser # Use the default browser stack
+    #pipe_through :browser # Use the default browser stack
 
-    get "/", PageController, :index
+    post "/", PageController, :index
   end
 
   # Other scopes may use custom stacks.
