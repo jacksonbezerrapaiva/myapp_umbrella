@@ -21,7 +21,7 @@ defmodule MyappWeb.Mixfile do
   # Type `mix help compile.app` for more information.
   def application do
     [mod: {MyappWeb, []},
-     applications: [:phoenix, :phoenix_pubsub, :phoenix_html, :cowboy, :logger, :gettext]]
+     applications: [:phoenix, :phoenix_pubsub, :phoenix_html, :cowboy, :logger, :gettext, :conduit, :env]]
   end
 
   # Specifies which paths to compile per environment.
@@ -37,6 +37,10 @@ defmodule MyappWeb.Mixfile do
      {:phoenix_html, "~> 2.6"},
      {:phoenix_live_reload, "~> 1.0", only: :dev},
      {:gettext, "~> 0.11"},
-     {:cowboy, "~> 1.0"}]
+     {:cowboy, "~> 1.0"},
+     {:conduit, "~> 0.12"},
+     {:conduit_sqs, "~> 0.3.0"},
+     {:env, "~> 0.1"}
+    ]
   end
 end
