@@ -1,8 +1,10 @@
 defmodule MyappWeb.PageControllerTest do
   use MyappWeb.ConnCase
 
-  test "GET /", %{conn: conn} do
-    conn = get conn, "/"
-    assert html_response(conn, 200) =~ "Welcome to Phoenix!"
+  test "test endpoint post /" do
+    conn = post(build_conn(), "/", ["id": 1])
+    body = json_response(conn, 200)
+    assert (body["userId"] == 1)
   end
+
 end
