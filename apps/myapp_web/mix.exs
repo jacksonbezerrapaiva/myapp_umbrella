@@ -40,7 +40,8 @@ defmodule MyappWeb.Mixfile do
      {:cowboy, "~> 1.0"},
      {:conduit, "~> 0.12"},
      {:conduit_sqs, "~> 0.3.0"},
-     {:env, "~> 0.1"}
+     {:env, "~> 0.1"},
+     {:credo, "~> 1.0.0", only: [:dev, :test], runtime: false}
     ]
   end
 end
