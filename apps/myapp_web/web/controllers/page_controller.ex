@@ -1,8 +1,11 @@
 defmodule MyappWeb.PageController do
   use MyappWeb.Web, :controller
   import Conduit.Message
+  import TestStruct
+
 
   def index(conn, _params) do
+    IO.inspect(%TestStruct{})
     try do
       raise ExceptionTes
     rescue
