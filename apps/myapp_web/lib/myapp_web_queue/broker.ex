@@ -1,4 +1,5 @@
 defmodule MyappWebQueue.Broker do
+  @moduledoc "Module broken"
   use Conduit.Broker, otp_app: :myapp_web
   configure do
     queue System.get_env("AWS_SQS_NAME_QUEUE")

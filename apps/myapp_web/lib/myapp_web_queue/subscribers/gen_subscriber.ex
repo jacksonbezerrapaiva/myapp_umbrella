@@ -1,4 +1,5 @@
 defmodule MyappWebQueue.GenSubscriber do
+  @moduledoc "Modulo de Subscriber"
   use Conduit.Subscriber
   require Logger
 

@@ -1,4 +1,5 @@
 defmodule MyappWeb do
+  @moduledoc "Module Web Phoenix"
   use Application
 
   # See http://elixir-lang.org/docs/stable/elixir/Application.html
