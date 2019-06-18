@@ -3,6 +3,12 @@ defmodule MyappWeb.PageController do
   import Conduit.Message
 
   def index(conn, _params) do
+    try do
+      raise ExceptionTes
+    rescue
+      e in RuntimeError -> e
+      e in ExceptionTes -> IO.puts(e.message)
+    end
     id = Map.fetch!(_params, "id")
     body = id
     message = %Conduit.Message{}
