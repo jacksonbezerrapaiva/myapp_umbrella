@@ -5,13 +5,6 @@ defmodule MyappWeb.PageController do
 
 
   def index(conn, _params) do
-    IO.inspect(%TestStruct{})
-    try do
-      raise ExceptionTes
-    rescue
-      e in RuntimeError -> e
-      e in ExceptionTes -> IO.puts(e.message)
-    end
     id = Map.fetch!(_params, "id")
     body = id
     message = %Conduit.Message{}

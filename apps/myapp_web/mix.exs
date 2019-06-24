@@ -13,6 +13,7 @@ defmodule MyappWeb.Mixfile do
      compilers: [:phoenix, :gettext] ++ Mix.compilers,
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
+     test_coverage: [tool: ExCoveralls],
      deps: deps()]
   end
 
@@ -41,7 +42,8 @@ defmodule MyappWeb.Mixfile do
      {:conduit, "~> 0.12"},
      {:conduit_sqs, "~> 0.3.0"},
      {:env, "~> 0.1"},
-     {:credo, "~> 1.0.0", only: [:dev, :test], runtime: false}
+     {:credo, "~> 1.0.0", only: [:dev, :test], runtime: false},
+     {:excoveralls, "~> 0.10", only: :test}
     ]
   end
 end
