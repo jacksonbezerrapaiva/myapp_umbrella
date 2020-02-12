@@ -2,3 +2,7 @@
 
 Example application with Phoenix.
 
+
+## Requirements
+- docker
+- docker-compose
