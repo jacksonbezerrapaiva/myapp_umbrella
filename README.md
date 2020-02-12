@@ -1,4 +1,4 @@
-# MyappUmbrella
+# Example SQS with Phoenix
 
-**TODO: Add description**
+Example application with Phoenix.
 
